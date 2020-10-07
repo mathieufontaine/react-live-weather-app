@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+$primary-color: #1e1d21;
+$secondary-color: #2f6ef5;
+$text-color: #e5e3ed;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $primary-color;
+  color: $text-color;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+      font-size: 3rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  background: $secondary-color;
+  color: #fff;
+  border-radius: 16px;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: auto;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: $primary-color;
+}
+
+.primary-text {
+  color: $primary-color;
+}
+
+.secondary-text {
+  color: $secondary-color;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section {
+  position: relative;
+  padding: 0 20px;
+}
