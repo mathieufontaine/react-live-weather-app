@@ -1,0 +1,108 @@
+.webcam-section {
+  text-align: center;
+  padding: 20px 50px 50px 50px;
+}
+
+.webcam-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.webcam-header h2 {
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: bold 900;
+  widows: auto;
+}
+.webcam-header h2 strong {
+  font-weight: 900;
+}
+
+.webcam-header button {
+  height: 50px;
+  background-color: rgb(27, 31, 27);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+  outline: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.webcam-header button:hover {
+  background-color: dimgray;
+}
+.webcams-list {
+  margin-top: 1rem;
+  /* display: flex;
+    justify-content: flex-start; */
+}
+
+.webcam-card {
+  /* display: flex; */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px grey;
+
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.webcam-video {
+  /* margin: 0 auto; */
+  /* display: block;
+    height: 200px; */
+  margin: 10px auto;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+}
+
+.webcam-title {
+  padding: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: none;
+}
+
+.webcam-city {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin: 10px 40px;
+  background-color: darkslategray;
+}
+
+.webcam-region {
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: italic;
+  color: black;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* @media (max-width: 785px){
+    .card  {
+      display: inline-block;
+    }
+    .card--img {
+      margin: 0 auto;
+      height: 400px
+    }
+    .card--content {
+      margin-left: 0px;
+    }
+    .card--title {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  } */

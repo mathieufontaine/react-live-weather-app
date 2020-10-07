@@ -1,19 +1,16 @@
 import React from "react";
-import Header from "./components/layout/Header";
-import Navbar from "./components/layout/Navbar";
-import Card from "./components/layout/Card";
-import Footer from "./components/layout/Footer";
+
+import Content from "./components/Content";
+import Header from "./components/Layout/Header";
+import Footer from "./components/Layout/Footer";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
-      <Navbar />
-      <div className="container">
-        <Card />
-      </div>
+      <Content />
       <Footer />
-    </>
+    </div>
   );
 }
 

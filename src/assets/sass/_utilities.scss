@@ -113,3 +113,41 @@ ul {
   position: relative;
   padding: 0 20px;
 }
+
+.content {
+  background-image: url("../img/blue.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+  min-height: 100vh;
+  min-width: 70vh;
+  margin: 0px auto;
+  padding-bottom: 10px;
+  display: block;
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.error-message {
+  margin: 0px auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.error-message h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.error-message h3 {
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+}
