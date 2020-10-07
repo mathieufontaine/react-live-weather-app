@@ -17,7 +17,7 @@ const LocalDate = ({ weather }) => {
   const time = localDate.toLocaleTimeString(undefined, optionsTime);
 
   return (
-    <div className="date-box">
+    <div className="flex date-box">
       <p className="date">{date}</p>
       <p className="time">{time}</p>
     </div>

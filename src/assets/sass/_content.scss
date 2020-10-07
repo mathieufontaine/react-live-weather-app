@@ -1,5 +1,5 @@
 .content {
-  height: 200vh;
+  // height: 200vh;
 
   .icons {
     margin-top: 1rem;
@@ -16,15 +16,22 @@
   }
 }
 
+.title {
+  margin: 1rem auto;
+  text-align: center;
+}
+
 .container {
   position: relative;
   width: 80%;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .section {
   position: relative;
-  padding: 0 20px;
+  padding: 3rem 0;
+  margin: 2rem auto;
 }
 
 .content {
@@ -63,4 +70,9 @@ main {
   color: white;
   font-size: 30px;
   font-style: italic;
+}
+
+.description {
+  font-style: italic;
+  margin: 10px;
 }

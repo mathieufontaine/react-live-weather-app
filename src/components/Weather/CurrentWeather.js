@@ -3,18 +3,18 @@ import LocalDate from "../Layout/LocalDate";
 
 const WeatherCard = ({ weather }) => {
   return (
-    <div className="weather-section">
-      <div className="location">
+    <div className="section current-weather-section">
+      <div className="flex location-box">
         {weather.name}, {weather.sys.country}
       </div>
 
       <LocalDate weather={weather} />
 
-      <div className="weather-box">
+      <div className="flex info-box">
         <div className="weather-temp-box">
           <h2>Temperature</h2>
-          <div className="temp">
-            <p>{Math.round(weather.main.temp)}ºC</p>
+          <div className="temp-box">
+            <p className="temp">{Math.round(weather.main.temp)}ºC</p>
             <p className="feels-like">
               Feels like: {Math.round(weather.main.feels_like)}ºC
             </p>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Video = ({ src }) => (
   <iframe
-    className="webcam-video"
+    className="video"
     //   allowFullScreen
     frameBorder="0"
     height="200"

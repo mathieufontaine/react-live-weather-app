@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-$primary-color: #1e1d21;
-$secondary-color: #2f6ef5;
-$text-color: #e5e3ed;
+$primary-color: darkslategray;
+$secondary-color: white;
+$text-color: black;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
+}
+
+html {
+  font-size: 10px;
 }
 
 * {
@@ -22,23 +26,20 @@ body {
   line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 10px;
-}
-
 h1 {
   font-size: 3rem;
+  color: $secondary-color;
 }
 
 h2 {
   font-size: 2.5rem;
+  color: $text-color;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 2rem;
+  color: $text-color;
 }
 
 h4 {
@@ -64,16 +65,33 @@ ul {
   background: $secondary-color;
   color: #fff;
   border-radius: 16px;
-  padding: 1rem 3rem;
-  text-transform: uppercase;
+  padding: 1rem 2rem;
   font-weight: bold;
   font-size: 1.6rem;
-  margin: auto;
+  outline: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: $primary-color;
+}
+
+.secondary {
+  background-color: lighten($secondary-color, 20%);
 }
 
 .btn:hover {
   transform: scale(1.1);
   background: $primary-color;
+}
+
+.btn-container {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
 }
 
 .primary-text {
@@ -82,4 +100,10 @@ ul {
 
 .secondary-text {
   color: $secondary-color;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

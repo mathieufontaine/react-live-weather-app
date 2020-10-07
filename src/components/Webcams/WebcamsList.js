@@ -63,26 +63,32 @@ function GetWebcams({ weather, webcams, setWebcams }) {
   };
 
   return (
-    <div className="webcam-section">
-      <div className="webcam-header">
+    <section className="section webcam-section">
+      <div className="title">
         <h2>
           Watch live Weather around <strong>{weather.name}</strong> {"(< 50km)"}
         </h2>
-        <button onClick={getWebcams}>Update Webcams</button>
       </div>
       {typeof webcams.result != "undefined" ? (
-        <div className="webcams-list">
-          <Slider {...settings}>
-            {webcams &&
-              webcams.result.webcams.map(webcam => (
-                <Webcam webcam={webcam} key={webcam.id} />
-              ))}
-          </Slider>
-        </div>
+        <>
+          <div className="webcams-list">
+            <Slider {...settings}>
+              {webcams &&
+                webcams.result.webcams.map(webcam => (
+                  <Webcam webcam={webcam} key={webcam.id} />
+                ))}
+            </Slider>
+          </div>
+          <div className="btn-container">
+            <button className="btn primary" onClick={getWebcams}>
+              Update Webcams
+            </button>
+          </div>
+        </>
       ) : (
         ""
       )}
-    </div>
+    </section>
   );
 }
 
