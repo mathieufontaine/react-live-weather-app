@@ -4,7 +4,7 @@ const Spinner = () => {
   return (
     <div className="error-message">
       <img
-        src={require("../../assets/img/spinner.gif")}
+        src={require("../../assets/img/gifs/spinner-sun.gif")}
         alt="spinner"
         className="spinner"
       />

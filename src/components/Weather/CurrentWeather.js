@@ -25,6 +25,20 @@ const CurrentWeather = ({ weather }) => {
           </div>
         </div>
         <div className="info-main-box">
+          {weather.weather[0].main === "Clouds" ||
+          "Clear" ||
+          "Rain" ||
+          "Foggy" ||
+          "Snow" ||
+          "Thunderstorm" ? (
+            <img
+              src={require(`../../assets/img/gifs/${weather.weather[0].main}.gif`)}
+              alt="weather-gif"
+              className="weather-gif"
+            />
+          ) : (
+            ""
+          )}
           <div className="current-weather">{weather.weather[0].main}</div>
           <p className="description">
             <strong>{weather.weather[0].description}</strong>
