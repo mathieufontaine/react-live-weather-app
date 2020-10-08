@@ -1,6 +1,4 @@
-.forecast-section {
-  // padding: 20px 50px 50px 50px;
-}
+// forecast-section
 
 .forecast-box {
   display: flex !important;
@@ -9,7 +7,6 @@
   text-align: center;
   min-width: 15%;
   width: auto !important;
-  /* border: 2px solid white; */
   border-radius: 10px;
   margin: 0.5rem;
   padding: 1rem;
@@ -27,6 +24,10 @@
     background-color: $primary-color;
     color: white;
   }
+  .text {
+    color: $primary-color;
+    font-weight: 600;
+  }
 }
 
 .forecast-box-details {
@@ -34,89 +35,3 @@
   flex-direction: column;
   text-align: left;
 }
-
-// @media (max-width: 968px) {
-//   .forecast-box .date,
-//   .forecast-box .temp,
-//   .forecast-box .weather,
-//   .forecast-box .date,
-//   .forecast-box .forecast-details-box p {
-//     font-size: smaller;
-//   }
-// }
-
-/* @media (max-width: 968px){
-    .forecast-title{
-      text-align: center;
-      margin: 0 auto;
-      font-size: 32px;
-    }
-    .forecast-box{
-      display: block;
-      position: relative;
-      margin: 30px 90px;
-    }
-    .forecast-box {
-      margin: 10px auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      padding: 20px 80px ;
-      justify-content: center;
-      align-items: center;
-    }
-    .forecast-box .date {
-      grid-column: 1/3;
-      grid-row: 1;
-      font-size: 30px;
-      margin-bottom: 0;
-      color: $primary-color;
-      font-weight: 900;
-      text-shadow: none;
-      font-size: 30px;
-    }
-    .forecast-box .temp {
-      color: white;
-      grid-column: 1;
-      grid-row: 2/4;
-      background-color: transparent;
-      box-shadow: none;
-      font-size: 50px;
-      padding: 10px;
-      margin: 0;
-    }
-    .forecast-box .weather-icon {
-      grid-column: 2;
-      grid-row: 2;
-
-      margin-bottom: -20px;
-      height: 80px;
-  
-    }
-    .forecast-box .weather {
-      grid-column: 2 ;
-      grid-row: 3;
-      font-size: 30px;
-  
-    }
-  
-  }
-
-  @media (max-width: 900px){
-    .forecast-title{
-      font-size: 20px;
-    }
-    .forecast-box .date{
-    font-size: 25px;
-    }
-    .forecast-box .temp {
-      font-size: 30px;
-    }
-    .forecast-box .weather-icon{
-      height: 50px;
-    }
-    .forecast-box .weather {
-      font-size: 20px;
-    }
-
-  } */

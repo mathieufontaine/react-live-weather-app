@@ -6,10 +6,11 @@ const Webcam = ({ webcam }) => {
     <div className="webcam-card">
       <Video
         src={
-          webcam.player.live.available == true
+          webcam.player.live.available === true
             ? `${webcam.player.live.embed}+?autoplay=1`
             : `${webcam.player.day.embed}+?autoplay=1`
         }
+        id={webcam.id}
       />
       <div className="title">{webcam.title}</div>
       {/* <div className="city">Location: {webcam.location.city}</div> */}

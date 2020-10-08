@@ -1,7 +1,8 @@
 import React from "react";
 
-const Video = ({ src }) => (
+const Video = ({ src, id }) => (
   <iframe
+    title={id}
     className="video"
     //   allowFullScreen
     frameBorder="0"

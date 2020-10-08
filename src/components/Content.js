@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,19 +12,18 @@ import Spinner from "./Layout/Spinner";
 
 const Content = () => {
   const [weather, setWeather] = useState("");
-  const [forecast, setForecast] = useState([]);
-  const [webcams, setWebcams] = useState([]);
-  const [isLoading, setLoading] = useState(false);
-  console.log(isLoading);
+  const [forecast, setForecast] = useState("");
+  const [webcams, setWebcams] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const updateBackground = weather => {
     switch (weather) {
       case "Clouds":
-        return `clouds${Math.floor(Math.random() * 6) + 1}`;
+        return `clouds${Math.floor(Math.random() * 5) + 1}`;
       case "Clear":
-        return `clear${Math.floor(Math.random() * 4) + 1}`;
+        return `clear${Math.floor(Math.random() * 3) + 1}`;
       case "Rain":
-        return `rain${Math.floor(Math.random() * 6) + 1}`;
+        return `rain${Math.floor(Math.random() * 3) + 1}`;
       case "Fog":
         return `fog${Math.floor(Math.random() * 2) + 1}`;
       case "Thunderstorm":
@@ -49,15 +48,14 @@ const Content = () => {
           <Search
             setWeather={setWeather}
             setForecast={setForecast}
-            setLoading={setLoading}
+            setIsLoading={setIsLoading}
           />
           <Geolocation
             setWeather={setWeather}
             setForecast={setForecast}
-            setLoading={setLoading}
+            setIsLoading={setIsLoading}
           />
         </div>
-
         {isLoading === true ? (
           <Spinner />
         ) : typeof weather.main != "undefined" ? (
@@ -68,7 +66,7 @@ const Content = () => {
             <h3>Please try again with another location</h3>
           </div>
         )}
-
+        ;
         {typeof weather.main != "undefined" ? (
           <WebcamsList
             weather={weather}
@@ -78,7 +76,6 @@ const Content = () => {
         ) : (
           ""
         )}
-
         {typeof forecast.list != "undefined" ? (
           <Forecast forecast={forecast} />
         ) : weather !== "" ? (

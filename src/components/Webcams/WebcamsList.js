@@ -5,9 +5,9 @@ import Slider from "react-slick";
 const API_KEY_WINDY = process.env.REACT_APP_API_KEY_WINDY;
 const Base_URL_WINDY = "https://api.windy.com/api/webcams/v2/list/";
 
-function GetWebcams({ weather, webcams, setWebcams }) {
+function WebcamsList({ weather, webcams, setWebcams }) {
   useEffect(() => {
-    if (weather.main != "") {
+    if (weather.main !== "") {
       getWebcams();
     }
   }, []);
@@ -54,7 +54,6 @@ function GetWebcams({ weather, webcams, setWebcams }) {
       )
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           setWebcams(data);
         });
     } catch (err) {
@@ -93,4 +92,4 @@ function GetWebcams({ weather, webcams, setWebcams }) {
   );
 }
 
-export default GetWebcams;
+export default WebcamsList;
