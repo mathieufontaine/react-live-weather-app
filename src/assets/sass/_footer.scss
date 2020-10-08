@@ -1,11 +1,14 @@
 .footer {
-  height: 5vh;
+  height: 7vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   align-items: center;
   justify-content: center;
   color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
   .logos {
     display: flex;
     text-align: center;
