@@ -32,7 +32,7 @@ function GetWebcams({ weather, webcams, setWebcams }) {
         }
       },
       {
-        breakpoint: 830,
+        breakpoint: 630,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -66,8 +66,9 @@ function GetWebcams({ weather, webcams, setWebcams }) {
     <section className="section webcam-section">
       <div className="title">
         <h2>
-          Watch live Weather around <strong>{weather.name}</strong> {"(< 50km)"}
+          Watch live Weather around <strong>{weather.name}</strong>
         </h2>
+        <h3>{"(< 50km)"}</h3>
       </div>
       {typeof webcams.result != "undefined" ? (
         <>

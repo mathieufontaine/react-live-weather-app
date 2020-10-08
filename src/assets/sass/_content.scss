@@ -1,19 +1,14 @@
 .content {
-  // height: 200vh;
-
-  .icons {
-    margin-top: 1rem;
-
-    a {
-      padding: 0.4rem;
-      font-size: 3rem;
-
-      &:hover {
-        color: $secondary-color;
-        @include easeOut();
-      }
-    }
-  }
+  background-image: url("../img/blue.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+  min-height: 85vh;
+  min-width: 70vw;
+  margin: 0px auto;
+  padding-bottom: 10px;
+  display: block;
+  overflow-x: hidden;
 }
 
 .title {
@@ -23,6 +18,7 @@
 
 .container {
   position: relative;
+  min-height: 80vh;
   width: 80%;
   margin: 0 auto;
   padding: 2rem;
@@ -32,18 +28,6 @@
   position: relative;
   padding: 3rem 0;
   margin: 2rem auto;
-}
-
-.content {
-  background-image: url("../img/blue.jpg");
-  background-size: cover;
-  background-position: bottom;
-  transition: 0.4s ease-out;
-  min-height: 100vh;
-  min-width: 70vh;
-  margin: 0px auto;
-  padding-bottom: 10px;
-  display: block;
 }
 
 main {
@@ -56,20 +40,16 @@ main {
 }
 
 .error-message {
-  margin: 0px auto;
-  padding: 50px;
+  margin: auto;
   text-align: center;
-}
-
-.error-message h2 {
-  color: white;
-  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
 }
 
 .error-message h3 {
-  color: white;
-  font-size: 30px;
   font-style: italic;
+  color: white;
 }
 
 .description {

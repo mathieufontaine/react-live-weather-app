@@ -21,9 +21,10 @@ const Forecast = ({ forecast }) => {
 
   return (
     <section className="section forecast-section">
-      <h2 className="title">
-        Evolution of the weather in {forecast.city.name} (3 hours forecast)
-      </h2>
+      <div className="title">
+        <h2>Evolution of the weather in {forecast.city.name}</h2>
+        <h3>(3 hours forecast)</h3>
+      </div>
       <Slider {...settings}>
         {forecast &&
           forecast.list.map(hour => (

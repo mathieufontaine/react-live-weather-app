@@ -1,7 +1,7 @@
 import React from "react";
 import LocalDate from "../Layout/LocalDate";
 
-const WeatherCard = ({ weather }) => {
+const CurrentWeather = ({ weather }) => {
   return (
     <div className="section current-weather-section">
       <div className="flex location-box">
@@ -11,7 +11,7 @@ const WeatherCard = ({ weather }) => {
       <LocalDate weather={weather} />
 
       <div className="flex info-box">
-        <div className="weather-temp-box">
+        <div className="info-temp-box">
           <h2>Temperature</h2>
           <div className="temp-box">
             <p className="temp">{Math.round(weather.main.temp)}ºC</p>
@@ -24,30 +24,32 @@ const WeatherCard = ({ weather }) => {
             <p>Max: {Math.round(weather.main.temp_max)}ºC</p>
           </div>
         </div>
-        <div className="weather-main-box">
-          <div className="weather">{weather.weather[0].main}</div>
+        <div className="info-main-box">
+          <div className="current-weather">{weather.weather[0].main}</div>
           <p className="description">
             <strong>{weather.weather[0].description}</strong>
           </p>
         </div>
-        <div className="weather-details-box">
+        <div className="info-details-box">
           <h2>Details</h2>
-          <p className="description">
-            <strong>Cloudiness:</strong> {weather.clouds.all}%
-          </p>
-          <p className="description">
-            <strong>Humidity:</strong> {weather.main.humidity}%
-          </p>
-          <p className="description">
-            <strong>Pressure:</strong> {weather.main.pressure} hPa
-          </p>
-          <p className="description">
-            <strong>Wind speed:</strong> {weather.wind.speed} meter/sec
-          </p>
+          <div>
+            <p className="description">
+              <strong>Cloudiness:</strong> {weather.clouds.all}%
+            </p>
+            <p className="description">
+              <strong>Humidity:</strong> {weather.main.humidity}%
+            </p>
+            <p className="description">
+              <strong>Pressure:</strong> {weather.main.pressure} hPa
+            </p>
+            <p className="description">
+              <strong>Wind speed:</strong> {weather.wind.speed} meter/sec
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default WeatherCard;
+export default CurrentWeather;

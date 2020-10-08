@@ -8,11 +8,14 @@ import Search from "./Location/Search";
 import CurrentWeather from "./Weather/CurrentWeather";
 import Geolocation from "./Location/Geolocation";
 import WebcamsList from "./Webcams/WebcamsList";
+import Spinner from "./Layout/Spinner";
 
 const Content = () => {
   const [weather, setWeather] = useState("");
   const [forecast, setForecast] = useState([]);
   const [webcams, setWebcams] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  console.log(isLoading);
 
   const updateBackground = weather => {
     switch (weather) {
@@ -43,14 +46,27 @@ const Content = () => {
     >
       <div className="container">
         <div className="search-box">
-          <Search setWeather={setWeather} setForecast={setForecast} />
-          <Geolocation setWeather={setWeather} setForecast={setForecast} />
+          <Search
+            setWeather={setWeather}
+            setForecast={setForecast}
+            setLoading={setLoading}
+          />
+          <Geolocation
+            setWeather={setWeather}
+            setForecast={setForecast}
+            setLoading={setLoading}
+          />
         </div>
 
-        {typeof weather.main != "undefined" ? (
+        {isLoading === true ? (
+          <Spinner />
+        ) : typeof weather.main != "undefined" ? (
           <CurrentWeather weather={weather} />
         ) : (
-          ""
+          <div className="error-message">
+            <h2>Sorry but we could not find any weather information</h2>
+            <h3>Please try again with another location</h3>
+          </div>
         )}
 
         {typeof weather.main != "undefined" ? (
@@ -66,10 +82,7 @@ const Content = () => {
         {typeof forecast.list != "undefined" ? (
           <Forecast forecast={forecast} />
         ) : weather !== "" ? (
-          <div className="error-message">
-            <h2>Sorry but we could not find any weather forecast.</h2>
-            <h3>Please try again with another location</h3>
-          </div>
+          ""
         ) : (
           ""
         )}

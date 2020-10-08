@@ -3,13 +3,16 @@ import React, { useEffect } from "react";
 const API_KEY = process.env.REACT_APP_API_KEY_WEATHER;
 const url = "https://api.openweathermap.org/data/2.5/";
 
-const Geolocation = ({ setWeather, setForecast }) => {
+const Geolocation = ({ setWeather, setForecast, setLoading }) => {
   useEffect(() => {
+    setLoading(true);
     currentCoordinates();
+    setLoading(false);
   }, []);
 
   const currentCoordinates = () => {
     if (navigator.geolocation) {
+      setLoading(true);
       const options = { timeout: 60000 };
       navigator.geolocation.getCurrentPosition(data => {
         fetchWeatherByCoordinates({
@@ -17,12 +20,14 @@ const Geolocation = ({ setWeather, setForecast }) => {
           lon: data.coords.longitude
         });
       });
+      setLoading(false);
     } else {
       alert("Sorry, your browser does not support geolocation!");
     }
   };
 
   const fetchWeatherByCoordinates = coordinates => {
+    setLoading(true);
     fetch(
       `${url}weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${API_KEY}`
     )
@@ -39,6 +44,7 @@ const Geolocation = ({ setWeather, setForecast }) => {
         setForecast(data);
         console.log(data);
       });
+    setLoading(false);
   };
 
   return (
