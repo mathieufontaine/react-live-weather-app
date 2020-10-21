@@ -2,15 +2,13 @@
   html {
     font-size: 50%;
   }
-  .container,
-  .footer {
+  .container {
     width: 90%;
   }
 }
 
 @media (max-width: 820px) {
-  .container,
-  .footer {
+  .container {
     width: 95%;
   }
 }

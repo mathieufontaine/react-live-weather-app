@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-$primary-color: rgb(14, 117, 135);
+$primary-color: #2c5093;
 $secondary-color: white;
 $text-color: black;
 
@@ -20,7 +20,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: $primary-color;
+  background: url("../img/backgrounds/blue.jpg");
   color: $text-color;
   font-size: 18px;
   line-height: 1.6;

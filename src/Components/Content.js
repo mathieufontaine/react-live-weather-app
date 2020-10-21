@@ -66,7 +66,6 @@ const Content = () => {
             <h3>Please try again with another location</h3>
           </div>
         )}
-        ;
         {typeof weather.main != "undefined" ? (
           <WebcamsList
             weather={weather}
