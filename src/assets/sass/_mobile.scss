@@ -17,7 +17,7 @@
 
 @media (max-width: 620px) {
   .current-weather-section {
-    margin: 0 6rem !important;
+    margin: 0 3rem !important;
 
     h2 {
       display: none;
@@ -52,6 +52,7 @@
   }
   .section {
     margin: 2rem;
+    padding: 3rem;
   }
   .btn {
     margin-top: 2rem;
@@ -69,6 +70,10 @@
         padding: 23px;
       }
     }
+  }
+
+  .slick-dots {
+    display: none !important;
   }
 
   .forecast-box .forecast-box-details {
