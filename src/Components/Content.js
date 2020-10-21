@@ -29,7 +29,7 @@ const Content = () => {
       case "Thunderstorm":
         return `thunderstorm${Math.floor(Math.random() * 3) + 1}`;
       case "Snow":
-        return "app snow";
+        return "snow";
       default:
         return "app;";
     }
@@ -43,6 +43,7 @@ const Content = () => {
           : "content"
       }
     >
+      <div className="overlay"></div>
       <div className="container">
         <div className="search-box">
           <Search

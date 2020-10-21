@@ -3,17 +3,25 @@
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
-  min-height: 85vh;
+  min-height: calc(100vh - 10vh - 7vh);
   min-width: 70vw;
   margin: 0px auto;
   padding-bottom: 10px;
   display: block;
   overflow-x: hidden;
+  position: relative;
 }
 
 .title {
   margin: 1rem auto;
   text-align: center;
+  color: $secondary-color;
+  h2 {
+    text-shadow: 2px 2px rgba(33, 33, 41, 0.5);
+  }
+  h3 {
+    color: $primary-color;
+  }
 }
 
 .container {
@@ -45,11 +53,11 @@ main {
   position: absolute;
   top: 50%;
   width: 100%;
-}
-
-.error-message h3 {
-  font-style: italic;
-  color: white;
+  h2,
+  h3 {
+    color: $secondary-color !important;
+    font-style: italic;
+  }
 }
 
 .description {

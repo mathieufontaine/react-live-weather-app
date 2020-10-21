@@ -63,7 +63,7 @@ function WebcamsList({ weather, webcams, setWebcams }) {
 
   return (
     <section className="section webcam-section">
-      <div className="title">
+      <div className="title outside-text">
         <h2>
           Watch live Weather around <strong>{weather.name}</strong>
         </h2>

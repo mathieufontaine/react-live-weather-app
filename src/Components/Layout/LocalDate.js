@@ -18,8 +18,8 @@ const LocalDate = ({ weather }) => {
 
   return (
     <div className="flex date-box">
-      <p className="date">{date}</p>
-      <p className="time">{time}</p>
+      <p className="date outside-text">{date}</p>
+      <p className="time outside-text">{time}</p>
     </div>
   );
 };

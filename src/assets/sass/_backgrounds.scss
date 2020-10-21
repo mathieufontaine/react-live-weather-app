@@ -1,5 +1,20 @@
+.overlay {
+  // &:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(black, 0.2);
+  // z-index: -1;
+  // }
+}
+
 .rain1 {
   background-image: url("../img/backgrounds/rain1.jpg");
+  .outside-text {
+    color: $secondary-color !important;
+  }
 }
 .rain2 {
   background-image: url("../img/backgrounds/rain2.jpg");
@@ -10,7 +25,12 @@
 
 .clouds1 {
   background-image: url("../img/backgrounds/clouds1.jpg");
+  .outside-text {
+    color: $primary-color !important;
+    text-shadow: none !important;
+  }
 }
+
 .clouds2 {
   background-image: url("../img/backgrounds/clouds2.jpg");
 }
@@ -36,16 +56,27 @@
 
 .fog1 {
   background-image: url("../img/backgrounds/fog1.jpg");
+  .outside-text {
+    color: $primary-color !important;
+    text-shadow: none !important;
+  }
 }
 .fog2 {
   background-image: url("../img/backgrounds/fog2.jpg");
+  .outside-text {
+    color: $primary-color !important;
+    text-shadow: none !important;
+  }
 }
 
-.thunderstorm2 {
-  background-image: url("../img/backgrounds/thunderstorm2.jpg");
-}
 .thunderstorm1 {
   background-image: url("../img/backgrounds/thunderstorm1.jpg");
+  .outside-text {
+    color: $secondary-color !important;
+  }
+}
+.thunderstorm2 {
+  background-image: url("../img/backgrounds/thunderstorm2.jpg");
 }
 .thunderstorm3 {
   background-image: url("../img/backgrounds/thunderstorm3.jpg");
@@ -56,4 +87,8 @@
 
 .snow {
   background-image: url("../img/backgrounds/snow.jpg");
+  .outside-text {
+    color: $primary-color !important;
+    text-shadow: none !important;
+  }
 }

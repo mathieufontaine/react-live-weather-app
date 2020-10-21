@@ -25,13 +25,14 @@
 // }
 
 .date-box .time,
-.date {
+.date-box .date {
   margin-top: 10px;
   font-weight: 500;
   font-style: bold;
   text-shadow: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: $primary-color;
+  font-style: italic;
 }
 
 .info-box {

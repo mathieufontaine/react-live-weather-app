@@ -4,7 +4,7 @@ import LocalDate from "../Layout/LocalDate";
 const CurrentWeather = ({ weather }) => {
   return (
     <div className="section current-weather-section">
-      <div className="flex location-box">
+      <div className="flex location-box outside-text">
         {weather.name}, {weather.sys.country}
       </div>
 
