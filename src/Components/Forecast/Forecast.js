@@ -22,7 +22,9 @@ const Forecast = ({ forecast }) => {
   return (
     <section className="section forecast-section">
       <div className="title outside-text">
-        <h2>Evolution of the weather in {forecast.city.name}</h2>
+        <h2>
+          Evolution of the weather in <strong>{forecast.city.name}</strong>
+        </h2>
         <h3>(3 hours forecast)</h3>
       </div>
       <Slider {...settings}>
