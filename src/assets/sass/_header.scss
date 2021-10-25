@@ -1,8 +1,14 @@
 .header {
-  height: 10vh;
+  height: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: $primary-color;
+  background: linear-gradient(
+    90deg,
+    rgba(44, 80, 147, 1) 50%,
+    rgba(109, 136, 129, 1) 79%,
+    rgba(235, 246, 89, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

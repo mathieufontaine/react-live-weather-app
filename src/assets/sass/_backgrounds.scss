@@ -12,9 +12,6 @@
 
 .rain1 {
   background-image: url("../img/backgrounds/rain1.jpg");
-  .outside-text {
-    color: $secondary-color !important;
-  }
 }
 .rain2 {
   background-image: url("../img/backgrounds/rain2.jpg");
@@ -25,10 +22,6 @@
 
 .clouds1 {
   background-image: url("../img/backgrounds/clouds1.jpg");
-  .outside-text {
-    color: $primary-color !important;
-    text-shadow: none !important;
-  }
 }
 
 .clouds2 {
@@ -39,9 +32,6 @@
 }
 .clouds4 {
   background-image: url("../img/backgrounds/clouds4.jpg");
-}
-.clouds5 {
-  background-image: url("../img/backgrounds/clouds5.jpg");
 }
 
 .clear1 {
@@ -56,24 +46,13 @@
 
 .fog1 {
   background-image: url("../img/backgrounds/fog1.jpg");
-  .outside-text {
-    color: $primary-color !important;
-    text-shadow: none !important;
-  }
 }
 .fog2 {
   background-image: url("../img/backgrounds/fog2.jpg");
-  .outside-text {
-    color: $primary-color !important;
-    text-shadow: none !important;
-  }
 }
 
 .thunderstorm1 {
   background-image: url("../img/backgrounds/thunderstorm1.jpg");
-  .outside-text {
-    color: $secondary-color !important;
-  }
 }
 .thunderstorm2 {
   background-image: url("../img/backgrounds/thunderstorm2.jpg");
@@ -87,8 +66,4 @@
 
 .snow {
   background-image: url("../img/backgrounds/snow.jpg");
-  .outside-text {
-    color: $primary-color !important;
-    text-shadow: none !important;
-  }
 }

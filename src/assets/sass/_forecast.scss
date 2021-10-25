@@ -9,18 +9,24 @@
   width: auto !important;
   border-radius: 10px;
   margin: 0.5rem;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  padding: 3rem;
+  background: rgba(white, 0.8);
 
   .date {
     font-size: smaller;
+    font-weight: 800;
   }
   .temp-box {
     font-weight: 800;
+    background: $primary-color;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
   }
   .text {
     color: $primary-color;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 2.3rem;
   }
 }
 
@@ -28,4 +34,8 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+}
+
+.forecast-box .icon {
+  width: 64px;
 }

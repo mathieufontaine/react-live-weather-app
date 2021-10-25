@@ -43,7 +43,7 @@ const Geolocation = ({ setWeather, setForecast, setIsLoading }) => {
   };
 
   return (
-    <button className="btn primary geolocation" onClick={currentCoordinates}>
+    <button className="btn geolocation" onClick={currentCoordinates}>
       Use Current Location
     </button>
   );

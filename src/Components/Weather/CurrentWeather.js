@@ -4,7 +4,7 @@ import LocalDate from "../Layout/LocalDate";
 const CurrentWeather = ({ weather }) => {
   return (
     <div className="section current-weather-section">
-      <div className="flex location-box outside-text">
+      <div className="flex location-box">
         {weather.name}, {weather.sys.country}
       </div>
 
@@ -25,10 +25,11 @@ const CurrentWeather = ({ weather }) => {
           </div>
         </div>
         <div className="info-main-box">
-          {weather.weather[0].main === "Clouds" ||
-          "Clear" ||
+          {weather.weather[0].main === "Clear" ||
           "Rain" ||
           "Foggy" ||
+          "Haze" ||
+          "Mist" ||
           "Snow" ||
           "Thunderstorm" ? (
             <img
@@ -37,7 +38,11 @@ const CurrentWeather = ({ weather }) => {
               className="weather-gif"
             />
           ) : (
-            ""
+            <img
+              src={require(`../../assets/img/gifs/Clouds.gif`)}
+              alt="weather-gif"
+              className="weather-gif"
+            />
           )}
           <div className="current-weather">{weather.weather[0].main}</div>
           <p className="description">

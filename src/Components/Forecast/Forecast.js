@@ -21,9 +21,10 @@ const Forecast = ({ forecast }) => {
 
   return (
     <section className="section forecast-section">
-      <div className="title outside-text">
+      <div className="title">
         <h2>
-          Evolution of the weather in <strong>{forecast.city.name}</strong>
+          Weather Forecast for the next hours in{" "}
+          <strong>{forecast.city.name}</strong>
         </h2>
         <h3>(3 hours forecast)</h3>
       </div>

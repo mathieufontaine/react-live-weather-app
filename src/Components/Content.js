@@ -19,12 +19,14 @@ const Content = () => {
   const updateBackground = weather => {
     switch (weather) {
       case "Clouds":
-        return `clouds${Math.floor(Math.random() * 5) + 1}`;
+        return `clouds${Math.floor(Math.random() * 4) + 1}`;
       case "Clear":
         return `clear${Math.floor(Math.random() * 3) + 1}`;
       case "Rain":
         return `rain${Math.floor(Math.random() * 3) + 1}`;
       case "Fog":
+        return `fog${Math.floor(Math.random() * 2) + 1}`;
+      case "Haze":
         return `fog${Math.floor(Math.random() * 2) + 1}`;
       case "Thunderstorm":
         return `thunderstorm${Math.floor(Math.random() * 3) + 1}`;
@@ -45,7 +47,7 @@ const Content = () => {
     >
       <div className="overlay"></div>
       <div className="container">
-        <div className="search-box">
+        <div className="section search-box">
           <Search
             setWeather={setWeather}
             setForecast={setForecast}

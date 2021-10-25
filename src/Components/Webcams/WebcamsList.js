@@ -63,7 +63,7 @@ function WebcamsList({ weather, webcams, setWebcams }) {
 
   return (
     <section className="section webcam-section">
-      <div className="title outside-text">
+      <div className="title">
         <h2>
           Watch live Weather around <strong>{weather.name}</strong>
         </h2>
@@ -80,7 +80,7 @@ function WebcamsList({ weather, webcams, setWebcams }) {
             </Slider>
           </div>
           <div className="btn-container">
-            <button className="btn primary" onClick={getWebcams}>
+            <button className="btn secondary" onClick={getWebcams}>
               Update Webcams
             </button>
           </div>

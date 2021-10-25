@@ -3,6 +3,7 @@
 $primary-color: #2c5093;
 $secondary-color: white;
 $text-color: black;
+$yellow: #ebf659;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -27,7 +28,7 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: $secondary-color;
 }
 
@@ -62,28 +63,24 @@ ul {
 .btn {
   display: inline-block;
   border: 0;
-  background: $secondary-color;
-  color: #fff;
+  background: $yellow;
   border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   font-weight: bold;
-  font-size: 1.6rem;
   outline: none;
   cursor: pointer;
   @include easeOut;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+}
 .primary {
   background-color: $primary-color;
 }
 
 .secondary {
   background-color: lighten($secondary-color, 20%);
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  background: $primary-color;
 }
 
 .btn-container {
@@ -107,4 +104,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section .title {
+  margin: 2rem 0;
+  text-align: center;
+  color: white;
 }

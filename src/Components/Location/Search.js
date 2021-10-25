@@ -6,9 +6,9 @@ const url = "https://api.openweathermap.org/data/2.5/";
 const Search = ({ setWeather, setForecast, setIsLoading }) => {
   const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    search(query);
-  }, [query]);
+  // useEffect(() => {
+  //   search(query);
+  // }, [query]);
 
   const search = query => {
     if (query !== "") {
@@ -31,21 +31,29 @@ const Search = ({ setWeather, setForecast, setIsLoading }) => {
     }
   };
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    search(query);
+  };
+
   return (
-    <div className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search for a city"
-        onChange={e => setQuery(e.target.value)}
         value={query}
+        onChange={e => setQuery(e.target.value)}
       />
-      <i
+      {/* <i
         className="fas fa-times clear-btn"
         onClick={() => {
           setQuery("");
         }}
-      ></i>
-    </div>
+      ></i> */}
+      <button className="btn btn-search" onClick={handleSubmit}>
+        Search
+      </button>
+    </form>
   );
 };
 
